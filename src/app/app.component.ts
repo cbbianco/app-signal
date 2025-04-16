@@ -14,15 +14,12 @@ import {JsonPipe, NgForOf} from "@angular/common";
 export class AppComponent implements OnInit {
   title = 'app-signal-facade';
 
-  private facade = inject(UsersFacade);
+  private facadeService = inject(UsersFacade);
 
-  users = this.facade.users;
-
-  error = this.facade.error;
-
+  users = this.facadeService.users;
 
   ngOnInit() {
-    this.facade.loadUsers();
+    this.facadeService.load();
   }
 
 }

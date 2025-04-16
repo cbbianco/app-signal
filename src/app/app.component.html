@@ -1,15 +1,21 @@
-<main>
-  <div>Listado</div>
-  <table>
-    <tr>
-      <th>Nombre</th>
-      <th>Email</th>
-    </tr>
-    @for (user of users(); track user.id) {
+<div class="container-table">
+  <main>
+    <div>Listado</div>
+    <table class="table-user">
       <tr>
-        <td>{{ user.name }}</td>
-        <td>{{ user.email }}</td>
+        <th>Nombre</th>
+        <th>Email</th>
+        <th>Username</th>
+        <th>Website</th>
       </tr>
-    }
-  </table>
-</main>
+      @for (user of users(); track user.id) {
+        <tr>
+          <td>{{ user.name }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.username }}</td>
+          <td>{{ user.website }}</td>
+        </tr>
+      }
+    </table>
+  </main>
+</div>

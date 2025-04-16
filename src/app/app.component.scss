@@ -1,0 +1,29 @@
+main {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 1em;
+  max-width: 500px;
+  justify-content: center;
+}
+
+.container-table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  > .table-user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+
+    > tr {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+}
